@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int n,r,x,y,ec=0,oc=1;
+	printf("enter n value");
+	scanf("%d",&n);
+	printf("enter x y values");
+	scanf("%d %d",&x,&y);
+	while(n!=0)
+	{
+		r=n%10;
+		if(r==x)
+		{
+			ec=ec+(y*oc);	
+		}
+		else
+		{
+			ec=ec+(r*oc);
+		}
+		oc=oc*10;
+		n=n/10;		
+	}
+	printf("%d\n",ec);
+	return 0;
+}
